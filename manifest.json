@@ -1,0 +1,14 @@
+{
+  "name": "Html5videos",
+  "version": "1.0",
+  "manifest_version":2,
+  "description": "Youtube-like feature to avoid half seen videos",
+  "permissions": ["tabs", "*://*.DOMAIN.com/*","storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.DOMAIN.com/*"],
+      "js": ["jquery-3.1.1.js","main.js"]
+    }
+  ]
+
+}
