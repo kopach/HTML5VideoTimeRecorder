@@ -3,12 +3,12 @@
   "version": "1.0",
   "manifest_version":2,
   "description": "Youtube-like feature to avoid half seen videos",
-  "permissions": ["tabs", "*://*.DOMAIN.com/*","storage"],
+  "permissions": ["tabs", "<all_urls>","storage"],
   "content_scripts": [
     {
-      "matches": ["*://*.DOMAIN.com/*"],
-      "js": ["jquery-3.1.1.js","main.js"]
+      "matches": ["<all_urls>"],
+      "js": ["jquery-3.1.1.js","main.js"],
+      "all_frames": true
     }
   ]
-
 }
